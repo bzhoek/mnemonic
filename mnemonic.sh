@@ -5,4 +5,4 @@ else
 fi
 echo $DIR
 
-grep "$1" "$DIR/OpenTaal-210G-basis-gekeurd.txt" | awk '{ print length, $0 }' | sort | cut -d" " -f2-
+egrep -h "$1" "$DIR/OpenTaal-210G-basis-gekeurd.txt" "$DIR/OpenTaal-210G-flexievormen.txt" | awk '{ print length, $0 }' | sort | cut -d" " -f2-
